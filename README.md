@@ -6,16 +6,23 @@ A real-time multiplayer Tic-Tac-Toe game built with a **server-authoritative Nak
 
 ## Live Deployment
 
-| Service             | URL                                             |
-| ------------------- | ----------------------------------------------- |
-| **Frontend**        | https://xo-xo-nakama.ranasushil026.workers.dev/ |
-| **Nakama Backend**  | https://xo-xo-nakama-production.up.railway.app  |
-| **Nakama API Port** | 443 (TLS)                                       |
+| Service      | URL                                             |
+| ------------ | ----------------------------------------------- |
+| **Frontend** | https://xo-xo-nakama.ranasushil026.workers.dev/ |
+| **Game Server** | Offline — see [Running Locally](#local-development) |
+
+> **Note:** The Railway-hosted Nakama backend is currently offline.
+> The frontend is live on Cloudflare Pages but online multiplayer 
+> (matchmaking, rooms, leaderboard) requires a running backend.
+> To play online, run the backend locally via Docker — see setup below.
+
 
 ### Infrastructure
 
-- **Backend**: [Railway](https://railway.app) — Nakama 3.22.0 + PostgreSQL, auto-deployed from `main` branch
-- **Frontend**: [Cloudflare Pages](https://pages.cloudflare.com) — Vite/React, globally distributed via Cloudflare CDN
+- **Backend**: Nakama 3.22.0 + PostgreSQL via Docker 
+  *(previously hosted on Railway — currently offline)*
+- **Frontend**: [Cloudflare Pages](https://pages.cloudflare.com) 
+  — Vite/React, globally distributed via Cloudflare CDN
 
 ---
 
